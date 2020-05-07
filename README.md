@@ -90,7 +90,7 @@ We have used Multinomial Logistic Classification and Multi-layer perceptron to c
 [3] https://librosa.github.io/ Librosa python package   
 [4] Davis, Stan and Paul Mermelstein. “Comparison of Parametric Representations for Monosyllabic Word Recognition in Continuously Spoken Se.” (1980).  
 [5] https://arxiv.org/pdf/1804.01149.pdf Hareesh Bahuleyan, “Music Genre Classification using Machine Learning Techniques”   
-[6] http://cs229.stanford.edu/proj2018/report/21.pdf 
+[6] http://cs229.stanford.edu/proj2018/report/21.pdf  
  
  
 
