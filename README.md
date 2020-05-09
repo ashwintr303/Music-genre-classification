@@ -14,14 +14,14 @@ The time domain and frequency domain features are extracted from the audio files
 **3.1.1 Root Mean Square (RMSE)**
 RMSE corresponds to the root mean square energy of a signal. RMSE can be calculated as:  
 <p align="center">
-    <img src="../misc/figures/centroid.jpg"/>
+    <img src="Music-genre-classification/misc/figures/centroid.jpg"/>
     <figcaption>Fig1. Formula to calculate RMSE of a signal</figcaption>
 </p>
 
 **3.1.2 Zero Crossing Rate (ZCR)**
 A zero-crossing is a point where the sign of a mathematical function changes (positive to negative or vice versa). Zero crossing rate is calculated as the total number zero crossings divided by the length of the frame. It usually has higher values for highly percussive sounds like those in metal and rock. It is calculated as:  
 <p align="center">
-    <img src="/misc/figures/zcr.jpg"/>
+    <img src="Music-genre-classification/misc/figures/zcr.jpg"/>
 </p>
 
 
@@ -33,7 +33,7 @@ Tempo is the speed or pace at which a passage of music is played. It is measured
 **3.2.1 Spectral Centroid**
 Spectral Centroid is a measure which indicates the centre of mass of the spectrum i.e., the frequency around which most of the spectral energy is centered.  Spectral centroid can be calculated as:  
 <p align="center">
-    <img src="/misc/figures/centroid.jpg"/>
+    <img src="Music-genre-classification/misc/figures/centroid.jpg"/>
 </p>
 
 
@@ -43,7 +43,7 @@ Spectral contrast is the difference between the maximum and minimum magnitudes i
 **3.2.3 Spectral Rolloff**   
 Spectral rolloff is the frequency value below which a given percentage (85% by default) of the total energy in the spectrum lies. Spectral rolloff is given by:  
 <p align="center">
-    <img src="/misc/figures/rolloff.jpg"/>
+    <img src="Music-genre-classification/misc/figures/rolloff.jpg"/>
 </p>
 
   
@@ -60,46 +60,46 @@ We implement different models for time domain features, frequency domain feature
 We have evaluated four multinomial logistic regression models, a time domain model, a frequency domain model, combined features model and a significant features model.     
 Table 1 shows that all three of our models perform better than their respective null models (which has intercept only value and considers all other weights to be zero). We observed that the -2\*Log Likelihood values of all the models are lower than that of the null model and a value of 0.000 (p<0.001) in the significance column indicates that the final model performs better than the null model.
 <p align="center">
-    <img src="/misc/tables/table1.jpg"/>
+    <img src="Music-genre-classification/misc/tables/table1.jpg"/>
 </p>
 
 
 **4.1.1 Time Domain Model**  
 The time domain model considers the three time domain features root mean square energy (RMSE), zero crossing rate (ZCR) and tempo.  We observed that the collinearity between the time domain features is minimal. The time domain model achieves a top accuracy of 66.5%.  
 <p align="center">
-    <img src="/misc/tables/table2.jpg"/>
+    <img src="Music-genre-classification/misc/tables/table2.jpg"/>
 </p>
 
 
 **4.1.2 Frequency Domain Model**
 Frequency domain model takes into account 5 MFCC features, spectral centroid, spectral contrast and spectral rolloff. The frequency domain model suffers from multicollinearity problems. Spectral centroid and spectral rolloff have very high collinearity of -0.965 and MFCC1 & MFCC2 have high collinearity of 0.732.  However, it still achieves a high accuracy of 95%.  
 <p align="center">
-    <img src="/misc/tables/table3.jpg"/>
+    <img src="Music-genre-classification/misc/tables/table3.jpg"/>
 </p>
 
 
 **4.1.3 Combined Features Model**
 Combined features model includes all the features from both time and frequency domains. We found high collinearity between spectral centroid & spectral rolloff, MFCC1 & MFCC2, spectral rolloff and ZCR and spectral centroid and ZCR.  
 <p align="center">
-    <img src="/misc/figures/correlations.jpg"/>
+    <img src="Music-genre-classification/misc/figures/correlations.jpg"/>
 </p>
 In terms of accuracy and R-squared values, the combined features model performs the best among the 3 models. 
 <p align="center">
-    <img src="/misc/figures/r_squares.jpg"/>
+    <img src="Music-genre-classification/misc/figures/r_squares.jpg"/>
 </p>
 The confusion matrix in table 4 for the combined model proves that it achieves the highest accuracy of 97.8%.
 <p align="center">
-    <img src="/misc/tables/table4.jpg"/>
+    <img src="Music-genre-classification/misc/tables/table4.jpg"/>
 </p>
 
 **4.1.4 Best Features Model**
 The likelihood ratio test of the combined features model shows that not all features are significant. Only the first 4 MFCC features, ZCR, RMSE and tempo have a significance value of 0.000 (less than a p value of 0.001). However, due to the high collinearity between MFCC1 and MFCC2, we have only considered MFCC1 for our best model. Hence, our best features model has MFCC1, MFCC3, MFCC4, ZCR, RMSE and tempo as independent variables.   
 <p align="center">
-    <img src="/misc/tables/table5.jpg"/>
+    <img src="Music-genre-classification/misc/tables/table5.jpg"/>
 </p>
 The best features model which only uses about half the number of total features achieves a comparable accuracy of 91.5%. 
 <p align="center">
-    <img src="/misc/tables/table6.jpg"/>
+    <img src="Music-genre-classification/misc/tables/table6.jpg"/>
 </p>
 
 **4.1.5 Forward and Backward Stepwise Regression using Interaction terms** 
@@ -112,49 +112,49 @@ We have evaluated the same four MLP models, a time domain model, a frequency dom
 We chose the minimum number of neurons to be 1 and maximum number of neurons to be 500. We used gradient descent optimization technique for our MLP. We tried multiple train-test splits such as 60-40, 70-30, 80-20 and 90-10 and multiple learning rates such as 0.4, 0.1 and 0.01 to optimise the model accuracy. We ran each of the variations five times as SPSS split the data randomly, and calculated the average accuracy for each train-test split.  
 From the above experiments, we found that a train-test split of 60-40 and learning rate of 0.4 gave the best accuracy of 71.5%.   
 <p align="center">
-    <img src="/misc/figures/mlp_td.jpg"/>
+    <img src="Music-genre-classification/misc/figures/mlp_td.jpg"/>
 </p>
 <p align="center">
-    <img src="/misc/tables/table7.jpg"/>
+    <img src="Music-genre-classification/misc/tables/table7.jpg"/>
 </p>
 
 **4.2.2 Frequency Domain Model**
 With an same experimental setup as the time domain model, we found that a train-test split of 90-10 and learning rate of 0.4 gave the best accuracy of 96.4%.   
 <p align="center">
-    <img src="/misc/figures/mlp_fd.jpg"/>
+    <img src="Music-genre-classification/misc/figures/mlp_fd.jpg"/>
 </p>
 <p align="center">
-    <img src="/misc/tables/table8.jpg"/>
+    <img src="Music-genre-classification/misc/tables/table8.jpg"/>
 </p>
 
 **4.2.3 Combined Features Model**
 With the same experimental steup again for the combined features model, we found that a train-test split of 90-10 and learning rate of 0.4 gave the best accuracy of 97.9%.  
 <p align="center">
-    <img src="/misc/figures/mlp_c.jpg"/>
+    <img src="Music-genre-classification/misc/figures/mlp_c.jpg"/>
 </p>
 <p align="center">
-    <img src="/misc/tables/table9.jpg"/>
+    <img src="Music-genre-classification/misc/tables/table9.jpg"/>
 </p>
  
 **4.2.4 Best Features Model**
 We have taken the best six features from the combined model. The normalized importance graph shows an example for one of the iterations for the best train-test split and learning rate from the combined feature model. We used this graph to extract the most occuring six features and they were MFCC 4, MFCC 3, MFCC 1, Zero Crossing Rate, RMSE and Rolloff.    
 <p align="center">
-    <img src="/misc/figures/importance.jpg"/>
+    <img src="Music-genre-classification/misc/figures/importance.jpg"/>
 </p>
 
 In order to predict the number of minimal features required for good accuracy, we experimented by running models with top 3, top 4, top 5 and top 6 features with a learning rate of 0.4 using gradient descent optimization. We ran each of the variations five times and averaged the accuracy for each train-test split.  
 From the above experiments, we found that using Top five features gave comparable accuracy of 95.3% to the combined feature model with accuracy of 97.9%.  
 <p align="center">
-    <img src="/misc/figures/mlp_reduced_features.jpg"/>
+    <img src="Music-genre-classification/misc/figures/mlp_reduced_features.jpg"/>
 </p>
 <p align="center">
-    <img src="/misc/tables/table10.jpg"/>
+    <img src="Music-genre-classification/misc/tables/table10.jpg"/>
 </p>
 
 ## 5. Results
 Table 11 shows the percentage accuracy of prediction for all the models we have analysed. As we can see, the frequency domain features give better results than time domain features. The highest accuracy is achieved by the combination of both frequency and time domain features. 
 <p align="center">
-    <img src="/misc/tables/table11.jpg"/>
+    <img src="Music-genre-classification/misc/tables/table11.jpg"/>
 </p>
  
 ## 6. Conclusion
@@ -169,7 +169,7 @@ We have used Multinomial Logistic Classification and Multi-layer perceptron to c
 [6] http://cs229.stanford.edu/proj2018/report/21.pdf  
  
 ### Contributors
-1. Ashwin Telagimathada Ravi - https://www.linkedin.com/in/ashwin-tr/
-2. Vignesh Muthuramalingam - https://www.linkedin.com/in/vignesh-muthuramalingam/
-3. Vineeth Rajesh Ellore - https://www.linkedin.com/in/vineethellore/
+1. Ashwin Telagimathada Ravi - [https://www.linkedin.com/in/ashwin-tr/] (https://www.linkedin.com/in/ashwin-tr/)  
+2. Vignesh Muthuramalingam - [https://www.linkedin.com/in/vignesh-muthuramalingam/] (https://www.linkedin.com/in/vignesh-muthuramalingam/)  
+3. Vineeth Rajesh Ellore - [https://www.linkedin.com/in/vineethellore/](https://www.linkedin.com/in/vineethellore/)  
 
