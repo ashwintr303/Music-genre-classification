@@ -160,11 +160,11 @@ Table 11 shows the percentage accuracy of prediction for all the models we have 
 We have used Multinomial Logistic Classification and Multi-layer perceptron to classify music genres. Frequency domain features performed than time domain features, and the combined features model performed the best. We have reduced the number of features by half while still maintaining high accuracy. 
  
 ### References
-[1] [http://marsyas.info/downloads/datasets.html](GTZAN dataset) 
-[2] G. Tzanetakis and P. Cook, "Musical genre classification of audio signals," in IEEE Transactions on Speech and Audio Processing, vol. 10, no. 5, pp. 293-302, July 2002.   
-[3] [https://librosa.github.io/](Librosa python package)   
-[4] Davis, Stan and Paul Mermelstein. “Comparison of Parametric Representations for Monosyllabic Word Recognition in Continuously Spoken Se.” (1980).  
-[5] [https://arxiv.org/pdf/1804.01149.pdf] (Hareesh Bahuleyan, “Music Genre Classification using Machine Learning Techniques”)  
+[1] [http://marsyas.info/downloads/datasets.html](GTZAN dataset)   
+[2] G. Tzanetakis and P. Cook, "Musical genre classification of audio signals," in IEEE Transactions on Speech and Audio Processing, vol. 10, no. 5, pp. 293-302, July 2002.     
+[3] [https://librosa.github.io/](Librosa python package)     
+[4] Davis, Stan and Paul Mermelstein. “Comparison of Parametric Representations for Monosyllabic Word Recognition in Continuously Spoken Se.” (1980).    
+[5] [https://arxiv.org/pdf/1804.01149.pdf] (Hareesh Bahuleyan, “Music Genre Classification using Machine Learning Techniques”)    
 [6] [http://cs229.stanford.edu/proj2018/report/21.pdf](http://cs229.stanford.edu/proj2018/report/21.pdf)
  
 ### Contributors
