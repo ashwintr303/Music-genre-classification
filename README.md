@@ -168,5 +168,8 @@ We have used Multinomial Logistic Classification and Multi-layer perceptron to c
 [5] https://arxiv.org/pdf/1804.01149.pdf Hareesh Bahuleyan, “Music Genre Classification using Machine Learning Techniques”   
 [6] http://cs229.stanford.edu/proj2018/report/21.pdf  
  
- 
+### Contributors
+1. Ashwin Telagimathada Ravi - https://www.linkedin.com/in/ashwin-tr/
+2. Vignesh Muthuramalingam - https://www.linkedin.com/in/vignesh-muthuramalingam/
+3. Vineeth Rajesh Ellore - https://www.linkedin.com/in/vineethellore/
 
