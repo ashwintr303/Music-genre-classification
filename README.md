@@ -14,7 +14,7 @@ The time domain and frequency domain features are extracted from the audio files
 **3.1.1 Root Mean Square (RMSE)**
 RMSE corresponds to the root mean square energy of a signal. RMSE can be calculated as:  
 <p align="center">
-    <img src="/misc/figures/centroid.jpg"/>
+    <img src="../misc/figures/centroid.jpg"/>
     <figcaption>Fig1. Formula to calculate RMSE of a signal</figcaption>
 </p>
 
