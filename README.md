@@ -12,7 +12,9 @@ The time domain and frequency domain features are extracted from the audio files
 ### 3.1 Time Domain Features
 
 **3.1.1 Root Mean Square (RMSE)**
-RMSE corresponds to the root mean square energy of a signal. RMSE can be calculated as: 
+RMSE corresponds to the root mean square energy of a signal. RMSE can be calculated as:  
+![RMSE of a signal](/misc/figures/rmse.jpg)
+Format: ![Alt Text](url)
 
 **3.1.2 Zero Crossing Rate (ZCR)**
 A zero-crossing is a point where the sign of a mathematical function changes (positive to negative or vice versa). Zero crossing rate is calculated as the total number zero crossings divided by the length of the frame. It usually has higher values for highly percussive sounds like those in metal and rock. It is calculated as:
