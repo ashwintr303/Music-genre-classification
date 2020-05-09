@@ -14,7 +14,7 @@ The time domain and frequency domain features are extracted from the audio files
 **3.1.1 Root Mean Square (RMSE)**
 RMSE corresponds to the root mean square energy of a signal. RMSE can be calculated as:  
 <p align="center">
-    <img src="/Music-genre-classification/misc/figures/rmse.JPG"/>
+    <img src="./Music-genre-classification/misc/figures/rmse.JPG"/>
 </p>
 
 **3.1.2 Zero Crossing Rate (ZCR)**
